@@ -1,9 +1,9 @@
 ---
-title: "How Sociodemographic Conditions Influence the Health Impact of Air Pollution"
+title: "How Sociodemographic Conditions Influence Effect of Air Pollution on Lung Cancer"
 subtitle: "A nationwide county-level analysis of PM2.5 and social equity interactions"
 author: "Siling Guo"
 thanks: "Project repository available at: [https://github.com/silingguo/MATH261A-project2](https://github.com/silingguo/MATH261A-project2)."
-date: today
+date: 2025-12-10
 date-format: long
 abstract: "This study focuses on exploring the interaction between sociodemographic conditions and air pollution in relation to the lung cancer incidence rates.We apply a multiple regression model with log transformation and conduct a hypothesis t-test. The results show that the sociodemographic conditions have a significant negative impact on the air pollution effect on lung cancer(p<0.001), and weaken the effect by approximate 1.3%. The model only includes sociodemographic conditions and air pollution as the predictor variables,and focuses on inference rather than prediction, so the results should be read with caution."
 format: pdf
