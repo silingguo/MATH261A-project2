@@ -1,7 +1,7 @@
 # MATH261A-project2
 Project 2 repository for MATH 261A.
 
-##Author
+## Author
 
 Siling Guo
 Date of submission: December 10, 2025
