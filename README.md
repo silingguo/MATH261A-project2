@@ -21,7 +21,7 @@ Data used in this project is obtained from [Harvard Dataverse](https://dataverse
 The final report and code were written by author, but the following resources were used for preliminary research:
 
 -   LLM(ex, ChatGPT Edu) for explaining terminology, grammar checking, and GitHub tutorials.
--   Online forums (e.g., CSDN, Runoob) – for learning the methods to interpret diagnostic plots, and generating the plots of interaction.
+-   Online forums (e.g., CSDN, Runoob) – for learning the methods to interpret diagnostic plots, and the methods to generate the plots of interaction.
 -   Wikipedia was used as a supplementary resource to gain background information.
 -   Google Translate for translation assistance.
 -   R (version 4.4.1)
