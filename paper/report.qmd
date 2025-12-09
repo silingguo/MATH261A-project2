@@ -318,7 +318,7 @@ g11 <- ggplot(dataset,aes(x = PM2.5,y = LC,color = as.factor(Sociod_EQI_qt),grou
   geom_smooth(method = "lm", se = FALSE, size = 1) +
   scale_color_manual(
     values = c("pink", "orange", "lightgreen", "lightblue"),
-    labels = c("Q1: Least Disadvantaged\n(Lowest Social EQI)", "Q2: Moderately Low", "Q3: Moderately High", "Q4: Most Disadvantaged\n(Highest Social EQI)")) +
+    labels = c("Q1: Best social conditions\n(Lowest Social EQI)", "Q2: Moderately good", "Q3: Moderately poor", "Q4: Worst social conditions\n(Highest Social EQI)")) +
   labs(title = "Social EQI of PM2.5 Effect on LC",
        x = "PM2.5",
        y = "LC",
@@ -337,7 +337,7 @@ In this study, we fit a multiple regression model with an interaction term to an
 
 Counties with better social conditions are able to reduce the effect of air pollution on the lung cancer incidence rate with better medical support, stronger community support, and better public awareness of the disease. In contrast, counties with poorer social conditions may have worse industrial environments, poorer food access, and worse medical support, which can make the impact of air pollution on lung cancer more severe.
 
-Although the model helps us to understand the interaction between air pollution and social conditions, it only includes two predictor variables, making it harder to fully explain and accurately predict the lung cancer incidence rate. In the future, we plan to go beyond the inference and explore the prediction. We will try splitting the data and using the regularized regression models, such as ridge and LASSO, to add more variables and improve the prediction performance.
+Although the model helps us to understand the interaction between air pollution and social conditions, it only includes two predictor variables, making it harder to fully explain and accurately predict the lung cancer incidence rate. In the future, we plan to go beyond the inference and explore the prediction. We will try splitting 70% of the data as training set and apply regularized regression models, such as ridge and LASSO.LASSO would be better for this dataset because there are many variables and some of them are highly correlated. Using Lasso can help us to select important variables while controlling overfitting. to find the add more variables and improve the prediction performance.
 
 \newpage
 

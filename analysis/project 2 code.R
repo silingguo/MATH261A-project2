@@ -135,14 +135,13 @@ g10 <- ggplot(data = dataset,aes(x = Sociod_EQI, y = log(LC)))+
 g6/g8 
 g9+g10
 #interaction plot
-# 补一个交互图
 dataset$Sociod_EQI_qt <- ntile(dataset$Sociod_EQI, 4)
 summary(dataset$Sociod_EQI)
 g11 <- ggplot(dataset,aes(x = PM2.5,y = LC,color = as.factor(Sociod_EQI_qt),group = Sociod_EQI_qt)) +
   geom_smooth(method = "lm", se = FALSE, size = 1) +
   scale_color_manual(
     values = c("pink", "orange", "lightgreen", "lightblue"),
-    labels = c("Q1: Least Disadvantaged\n(Lowest SociodEQI)", "Q2: Moderately Low", "Q3: Moderately High", "Q4: Most Disadvantaged\n(Highest SociodEQI)")) +
+    labels = c("Q1: Best social conditions\n(Lowest SociodEQI)", "Q2: Moderately good", "Q3: Moderately poor", "Q4: Worst social conditions\n(Highest SociodEQI)")) +
   labs(title = "Sociod_EQI of PM2.5 Effect on LC",
        x = "PM2.5",
        y = "LC",

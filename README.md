@@ -18,7 +18,7 @@ Data used in this project is obtained from [Harvard Dataverse](https://dataverse
 
 ## External Resources
 
-The final report and code were written by author, but the following resources were used for preliminary research:
+The final report and code were written by the author, but the following resources were used for preliminary research:
 
 -   LLM(ex, ChatGPT Edu) for explaining terminology, grammar checking, and GitHub tutorials.
 -   Online forums (e.g., CSDN, Runoob) – for learning the methods to interpret diagnostic plots, and the methods to generate the plots of interaction.
