@@ -127,7 +127,7 @@ This model meets the assumptions, and the unequal variance issue of the base mod
 
 Our analysis also has some clear limitations: the data are at the county level, so the results only reflect county patterns and not individual risk. Besides, only PM2.5 and Social EQI are included in the model, while other important factors of lung cancer, such as smoking and genetics, are not included, which limits the predictive ability. Moreover, the Social EQI score is a rough combined measure, so it doesn’t really capture the details of social conditions.
 
-We use the base R’s lm() function to implement the linear model[@RCoreTeam2024]
+We use the base R’s lm() function to implement the linear model[@R].
 
 # Results
 
