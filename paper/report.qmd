@@ -82,7 +82,7 @@ maxlc_q <- mean(dataset$LC <= maxlc)
 |   PM2.5    | 10.125 |  1.70   |  16.91  | 10.61  | `r round(var_PM2.5, 2)`  |
 | Social EQI |  0.08  |  -4.81  |  3.98   |  0.00  | `r round(var_Sociod, 2)` |
 
-The table below compares the counties with the best and worst sociodemographic conditions. It is surprising to see that even though their social conditions are very different, their PM2.5 levels and lung cancer incidence rates are quite similar. The similarity in these outcomes leads to our question: How do social conditions influence the effect of air pollution on lung cancer? We thus use a multiple regression model with interaction terms to investigate.
+The table below compares the counties with the best and worst social conditions. It is surprising to see that even though their social conditions are very different, their PM2.5 levels and lung cancer incidence rates are quite similar. The similarity in these outcomes leads to our question: How do social conditions influence the effect of air pollution on lung cancer? We thus use a multiple regression model with interaction terms to investigate.
 
 | County | Social EQI | PM2.5 | PM2.5 Quartile | LC | LC Quartile |
 |:----------:|:----------:|:----------:|:----------:|:----------:|:----------:|
@@ -222,14 +222,14 @@ g8 <- ggplot(logmd2_df,aes(sample = residual))+
 g9 <- ggplot(data = dataset,aes(x = PM2.5, y = log(LC)))+
   geom_point()+
   geom_smooth(method = "lm", se = FALSE, color = "red") +
-  labs(title = "log(LC) vs PM2.5 of Advance Model(Log Scale)",
+  labs(title = "log(LC) vs PM2.5 of Advance Model",
        x = "PM2.5",
        y = "log(LC)")
 
 g10 <- ggplot(data = dataset,aes(x = Sociod_EQI, y = log(LC)))+
   geom_point()+
   geom_smooth(method = "lm", se = FALSE, color = "red") +
-  labs(title = "LC vs Sociod_EQI of Advance Model(Log Scale)",
+  labs(title = "(LC) vs Sociod_EQI of Advance Model",
        x = "Social EQI",
        y = "log(LC)")
 
@@ -337,7 +337,7 @@ In this study, we fit a multiple regression model with an interaction term to an
 
 Counties with better social conditions are able to reduce the effect of air pollution on the lung cancer incidence rate with better medical support, stronger community support, and better public awareness of the disease. In contrast, counties with poorer social conditions may have worse industrial environments, poorer food access, and worse medical support, which can make the impact of air pollution on lung cancer more severe.
 
-Although the model helps us to understand the interaction between air pollution and social conditions, it only includes two predictor variables, making it harder to fully explain and accurately predict the lung cancer incidence rate. In the future, we plan to go beyond the inference and explore the prediction. We will try splitting 70% of the data as training set and apply regularized regression models, such as ridge and LASSO.LASSO would be better for this dataset because there are many variables and some of them are highly correlated. Using Lasso can help us to select important variables while controlling overfitting. to find the add more variables and improve the prediction performance.
+Although the model helps us to understand the interaction between air pollution and social conditions, it only includes two predictor variables, making it harder to fully explain and accurately predict the lung cancer incidence rate. In the future, we plan to go beyond the inference and explore the prediction. We will try splitting 70% of the data as training set and apply regularized regression models, such as ridge and LASSO. LASSO would be better for this dataset because there are many variables and some of them are highly correlated. Using Lasso can help us to select important variables while controlling overfitting. to find the add more variables and improve the prediction performance.
 
 \newpage
 
